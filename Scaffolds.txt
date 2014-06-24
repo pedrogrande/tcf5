@@ -1,0 +1,21 @@
+rails g scaffold Banner name image link active:boolean
+rails g scaffold Category name description:text icon
+rails g scaffold Enquiry name last_name email phone content:text
+rails g scaffold Location name building street suburb state postcode country map_link city logo embed_map:text website phone image slug
+rails g scaffold Event name tagline description:text date:date start_time:time end_time:time location:references icon link slug price
+rails g scaffold EventRegistration event:references first_name last_name email phone
+rails g scaffold Payment payment_method payment_price user:references
+rails g scaffold Course name tagline intro:text description:text image price icon slug
+rails g scaffold Post title lead content:text image user:references category:references slug publish:boolean published_date:date impressions_count:integer
+rails g scaffold Profile name phone profile_picture user:references slug google_plus linkedin twitter github website title info:text
+rails g scaffold Referrer user:references name contact_phone company referral_code
+rails g scaffold ReferralVisit referrer:references ref_session
+rails g scaffold SkillGroup name description:text icon slug
+rails g scaffold SkillLevel name summary question number:integer
+rails g scaffold Special admin_id:integer recipient_email course:references intake:references dollar_discount:integer percent_discount:integer guid date_redeemed:date
+rails g scaffold Testimonial name quote:text text:text image course:references featured:boolean
+rails g scaffold Workshop name tagline description:text duration_minutes:integer icon skill_group:references workshop_code active:boolean slug outcome:text objectives:text benefits:text skill_level:references
+rails g model CourseWorkshop course:references workshop:references
+rails g scaffold Intake course:references location:references day date:date end_date:date start_time:time end_time:time number_of_places:integer number_of_students_registered:integer active:boolean
+rails g scaffold Enrolment first_name last_name phone email address suburb state postcode country paid:boolean price:integer guid stripe_id course:references intake:references payment:references special:references
+rails g scaffold ReferralEnrolment referrer:references enrolment:references student_paid:integer amount_owed:integer date_paid:integer

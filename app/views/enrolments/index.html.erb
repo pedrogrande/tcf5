@@ -1,0 +1,57 @@
+<h1>Listing enrolments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Suburb</th>
+      <th>State</th>
+      <th>Postcode</th>
+      <th>Country</th>
+      <th>Paid</th>
+      <th>Price</th>
+      <th>Guid</th>
+      <th>Stripe</th>
+      <th>Course</th>
+      <th>Intake</th>
+      <th>Payment</th>
+      <th>Special</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enrolments.each do |enrolment| %>
+      <tr>
+        <td><%= enrolment.first_name %></td>
+        <td><%= enrolment.last_name %></td>
+        <td><%= enrolment.phone %></td>
+        <td><%= enrolment.email %></td>
+        <td><%= enrolment.address %></td>
+        <td><%= enrolment.suburb %></td>
+        <td><%= enrolment.state %></td>
+        <td><%= enrolment.postcode %></td>
+        <td><%= enrolment.country %></td>
+        <td><%= enrolment.paid %></td>
+        <td><%= enrolment.price %></td>
+        <td><%= enrolment.guid %></td>
+        <td><%= enrolment.stripe_id %></td>
+        <td><%= enrolment.course %></td>
+        <td><%= enrolment.intake %></td>
+        <td><%= enrolment.payment %></td>
+        <td><%= enrolment.special %></td>
+        <td><%= link_to 'Show', enrolment %></td>
+        <td><%= link_to 'Edit', edit_enrolment_path(enrolment) %></td>
+        <td><%= link_to 'Destroy', enrolment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enrolment', new_enrolment_path %>

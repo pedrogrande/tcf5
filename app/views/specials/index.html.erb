@@ -1,0 +1,39 @@
+<h1>Listing specials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Admin</th>
+      <th>Recipient email</th>
+      <th>Course</th>
+      <th>Intake</th>
+      <th>Dollar discount</th>
+      <th>Percent discount</th>
+      <th>Guid</th>
+      <th>Date redeemed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @specials.each do |special| %>
+      <tr>
+        <td><%= special.admin_id %></td>
+        <td><%= special.recipient_email %></td>
+        <td><%= special.course %></td>
+        <td><%= special.intake %></td>
+        <td><%= special.dollar_discount %></td>
+        <td><%= special.percent_discount %></td>
+        <td><%= special.guid %></td>
+        <td><%= special.date_redeemed %></td>
+        <td><%= link_to 'Show', special %></td>
+        <td><%= link_to 'Edit', edit_special_path(special) %></td>
+        <td><%= link_to 'Destroy', special, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Special', new_special_path %>

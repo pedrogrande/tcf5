@@ -1,0 +1,15 @@
+<%= simple_form_for(@referral_enrolment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :referrer %>
+    <%= f.association :enrolment %>
+    <%= f.input :student_paid %>
+    <%= f.input :amount_owed %>
+    <%= f.input :date_paid %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<%= simple_form_for(@referrer) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :user %>
+    <%= f.input :name %>
+    <%= f.input :contact_phone %>
+    <%= f.input :company %>
+    <%= f.input :referral_code %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

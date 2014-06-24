@@ -1,5 +1,7 @@
+source 'https://code.stripe.com'
+source 'https://rails-assets.org'
 source 'https://rubygems.org'
-
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -19,6 +21,23 @@ gem 'cancan'
 gem 'rolify'
 gem 'simple_form', '~> 3.1.0.rc1'
 gem 'country_select'
+gem 'friendly_id', '~> 5.0.0'
+# gem "font-awesome-rails", '~> 4.1.0.0'
+gem 'jquery-turbolinks'
+gem 'stripe'
+gem 'will_paginate', '~> 3.0'
+gem 'acts-as-taggable-on'
+gem 'impressionist'
+gem 'ckeditor_rails', :git => 'https://github.com/tsechingho/ckeditor-rails'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'sitemap_generator'
+gem 'whenever', :require => false
+gem 'sucker_punch', '~> 1.0'
+gem 'exception_notification'
+gem 'newrelic_rpm'
+gem 'rails-assets-RRSSB'
+gem "html_truncator", "~>0.2"
 group :development do
   gem "better_errors"
   gem 'quiet_assets'

@@ -1,4 +1,44 @@
 Rails.application.routes.draw do
+  resources :referral_enrolments
+
+  resources :enrolments
+
+  resources :intakes
+
+  resources :workshops
+
+  resources :testimonials
+
+  resources :specials
+
+  resources :skill_levels
+
+  resources :skill_groups
+
+  resources :referral_visits
+
+  resources :referrers
+
+  resources :profiles
+
+  resources :posts
+
+  resources :courses
+
+  resources :payments
+
+  resources :event_registrations
+
+  resources :events
+
+  resources :locations
+
+  resources :enquiries
+
+  resources :categories
+
+  resources :banners
+
   get 'admin' => 'admin#index'
 
   devise_for :users

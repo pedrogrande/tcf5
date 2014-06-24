@@ -1,0 +1,23 @@
+<%= simple_form_for(@workshop) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :tagline %>
+    <%= f.input :description %>
+    <%= f.input :duration_minutes %>
+    <%= f.input :icon %>
+    <%= f.association :skill_group %>
+    <%= f.input :workshop_code %>
+    <%= f.input :active %>
+    <%= f.input :slug %>
+    <%= f.input :outcome %>
+    <%= f.input :objectives %>
+    <%= f.input :benefits %>
+    <%= f.association :skill_level %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

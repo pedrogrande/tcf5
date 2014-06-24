@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @workshop.name %>
+</p>
+
+<p>
+  <strong>Tagline:</strong>
+  <%= @workshop.tagline %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @workshop.description %>
+</p>
+
+<p>
+  <strong>Duration minutes:</strong>
+  <%= @workshop.duration_minutes %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @workshop.icon %>
+</p>
+
+<p>
+  <strong>Skill group:</strong>
+  <%= @workshop.skill_group %>
+</p>
+
+<p>
+  <strong>Workshop code:</strong>
+  <%= @workshop.workshop_code %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @workshop.active %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @workshop.slug %>
+</p>
+
+<p>
+  <strong>Outcome:</strong>
+  <%= @workshop.outcome %>
+</p>
+
+<p>
+  <strong>Objectives:</strong>
+  <%= @workshop.objectives %>
+</p>
+
+<p>
+  <strong>Benefits:</strong>
+  <%= @workshop.benefits %>
+</p>
+
+<p>
+  <strong>Skill level:</strong>
+  <%= @workshop.skill_level %>
+</p>
+
+<%= link_to 'Edit', edit_workshop_path(@workshop) %> |
+<%= link_to 'Back', workshops_path %>

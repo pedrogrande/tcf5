@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @enrolment.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @enrolment.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @enrolment.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @enrolment.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @enrolment.address %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @enrolment.suburb %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @enrolment.state %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @enrolment.postcode %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @enrolment.country %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @enrolment.paid %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @enrolment.price %>
+</p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @enrolment.guid %>
+</p>
+
+<p>
+  <strong>Stripe:</strong>
+  <%= @enrolment.stripe_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @enrolment.course %>
+</p>
+
+<p>
+  <strong>Intake:</strong>
+  <%= @enrolment.intake %>
+</p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @enrolment.payment %>
+</p>
+
+<p>
+  <strong>Special:</strong>
+  <%= @enrolment.special %>
+</p>
+
+<%= link_to 'Edit', edit_enrolment_path(@enrolment) %> |
+<%= link_to 'Back', enrolments_path %>

@@ -128,7 +128,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "info_enquiries", ["referrer_id"], name: "index_info_enquiries_on_referrer_id", using: :btree
+  add_index "info_enquiries", ["referrer_id"], name: "index_info_enquiries_on_referrer_id"
 
   create_table "intakes", force: true do |t|
     t.integer  "course_id"

@@ -1,12 +1,13 @@
 source 'https://code.stripe.com'
 source 'https://rails-assets.org'
 source 'https://rubygems.org'
-ruby '2.1.2'
+# ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record
-gem 'pg'
+# gem 'pg'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

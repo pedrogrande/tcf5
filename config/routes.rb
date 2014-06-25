@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :info_enquiries
+
   resources :referral_enrolments
 
   resources :enrolments

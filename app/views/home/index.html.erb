@@ -1,107 +1,74 @@
 <%= render 'header' %>
-<%= render 'hero' %>
 
-<div class="dark-blue">
+<div class="main">
 
+	<section id="hero">
+		<%= render 'hero' %>
 
-</div>
+		<div class="dark-blue">
+		</div>
+	</section>
 
-<div class="white">
+	<section id="about">
+		<%= render 'about' %>
+	</section>
+
+	<section id="course">
+		<%= render 'course' %>
+	</section>
+
+	<section id="schedule">
+		<%= render 'schedule' %>
+	</section>
+<section id="team">
+	<%= render 'team' %>
+</section>
+
+<section id="faq">
+<%= render 'faq' %>
+</section>
+<section id="footer">
+
+</section>
+<div id="info-enquiry">
+
+<br><br>
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-      <h2 class="text-center">Coder Factory</h2>
-      <div class=" text-justify">
-      	<p>The Coder Factory is an intensive 12 week course that teaches you the fundamentals of web development. </p>
-
-				<p>Online tutorials will only take you so far. Whether you are looking to build your own apps or you're thinking of becoming a web developer, The Coder Factory gives you the tools you need to reach your goals.</p>
-
-				<p>Here are just a few of the places our graduates have gone onto after completing our course:</p>
-			</div>
-
-Vistr
-Black Citrus
-Sentia</p>
-
-    </div>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
+	<%= simple_form_for(@info_enquiry) do |f| %>
+  <%= f.error_notification %>
+  <h3 class="text-center">Download the info pack</h3>
+  <hr>
+  <div class="form-group">
+    <%= f.input :first_name, label: false, placeholder: 'Your first name', input_html: { class: 'form-control'} %>
   </div>
-</div>
-</div>
-<div class="white">
-<div class="container">
-	<div class="row">
-		<div class="col-md-12 text-center">
-      <h2>Alumni</h2>
-      <p>Lorem ipsum</p>
-
-    </div>
+ 	<div class="form-group">
+    <%= f.input :email, label: false, placeholder: 'Your email', input_html: { class: 'form-control'} %>
   </div>
+  <%= f.submit 'Download info pack', class: 'btn btn-lg btn-default btn-block' %>
+  
+<% end %>
+<br><br>
 </div>
-</div>
-<div class="grey">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-	      <h2 class=" text-center">The Course</h2>
-	      <div class="text-justify text">
-		      <p>Our twelve week program covers the most important aspects of application design and development. From object-oriented programming and server-side principles, to front-end technologies such as HTML5/CSS3 and Javascript.</p>
-
-					<p>But learning about web development is much more than learning how to code. Along with teaching you the basic building blocks of web development we teach you how to think like a programmer. We show you the motivations behind good software design and best-practices, data structures, and code readings.</p>
-					<p>
-					<blockquote>"The environment was incredibly friendly and the teachers were super helpful" <small>Jessa Boanas-Dewes, Toot Sweet.</small>
-					</blockquote></p>
-				</div>
-
-					<div class="text-center">
-						<a href="#" class="btn btn-lg btn-default">Download the info pack</a>
-					</div>
-	    </div>
-	  </div>
-	</div>
-</div>
-<div class="white">
-<div class="container">
-	<div class="row">
-		<div class="col-md-12 text-center">
-      <h2>Schedule</h2>
-      <p>Lorem ipsum</p>
-
-
-      <h2>Team</h2>
-      <div class="row">
-				<aside class="col-md-4">
-    			<div itemscope itemtype="http://data-vocabulary.org/Person">
-      			<p class="text-center">
-		        	<img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_250/v1402160896/xr2tdzn1w7izwuzg4phn.png" class="img-responsive img-circle">
-		        	<strong><span itemprop="name">Dan Siepen</span></strong><br>
-		        	<span itemprop="title">Partnerships</span>
-		      	</p>
-				  </div>
-				</aside>
-				<aside class="col-md-4">
-    			<div itemscope itemtype="http://data-vocabulary.org/Person">
-      			<p class="text-center">
-		        	<img src="https://res.cloudinary.com/coder-factory/image/upload/c_scale,w_250/v1401939772/wrdieci0ybzhlydriccf.png" class="img-responsive img-circle">
-		        	<strong><span itemprop="name">Florian Fischer</span></strong><br>
-		        	<span itemprop="title">Operations</span>
-		      	</p>
-				  </div>
-				</aside>
-				<aside class="col-md-4">
-    			<div itemscope itemtype="http://data-vocabulary.org/Person">
-      			<p class="text-center">
-		        	<img src="https://res.cloudinary.com/coder-factory/image/upload/c_scale,w_250/v1401939772/wrdieci0ybzhlydriccf.png" class="img-responsive img-circle">
-		        	<strong><span itemprop="name">Florian Fischer</span></strong><br>
-		        	<span itemprop="title">Operations</span>
-		      	</p>
-				  </div>
-				</aside>
-
-     
-      
-
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+</div></div></div></div>
+<script>
+$(".main").onepage_scroll({
+   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
+                                    // the browser's width is less than 600, the fallback will kick in.
+   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+});
+// $('body').scrollspy({ target: '.scroller' })
+</script>

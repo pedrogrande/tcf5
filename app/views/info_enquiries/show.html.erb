@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @info_enquiry.email %>
+</p>
+
+<p>
+  <strong>Referrer:</strong>
+  <%= @info_enquiry.referrer %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @info_enquiry.first_name %>
+</p>
+
+<%= link_to 'Edit', edit_info_enquiry_path(@info_enquiry) %> |
+<%= link_to 'Back', info_enquiries_path %>

@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140625013323) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "banners", force: true do |t|
     t.string   "name"
     t.string   "image"
@@ -40,8 +37,8 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "course_workshops", ["course_id"], name: "index_course_workshops_on_course_id", using: :btree
-  add_index "course_workshops", ["workshop_id"], name: "index_course_workshops_on_workshop_id", using: :btree
+  add_index "course_workshops", ["course_id"], name: "index_course_workshops_on_course_id"
+  add_index "course_workshops", ["workshop_id"], name: "index_course_workshops_on_workshop_id"
 
   create_table "courses", force: true do |t|
     t.string   "name"
@@ -88,10 +85,10 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "enrolments", ["course_id"], name: "index_enrolments_on_course_id", using: :btree
-  add_index "enrolments", ["intake_id"], name: "index_enrolments_on_intake_id", using: :btree
-  add_index "enrolments", ["payment_id"], name: "index_enrolments_on_payment_id", using: :btree
-  add_index "enrolments", ["special_id"], name: "index_enrolments_on_special_id", using: :btree
+  add_index "enrolments", ["course_id"], name: "index_enrolments_on_course_id"
+  add_index "enrolments", ["intake_id"], name: "index_enrolments_on_intake_id"
+  add_index "enrolments", ["payment_id"], name: "index_enrolments_on_payment_id"
+  add_index "enrolments", ["special_id"], name: "index_enrolments_on_special_id"
 
   create_table "event_registrations", force: true do |t|
     t.integer  "event_id"
@@ -103,7 +100,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "event_registrations", ["event_id"], name: "index_event_registrations_on_event_id", using: :btree
+  add_index "event_registrations", ["event_id"], name: "index_event_registrations_on_event_id"
 
   create_table "events", force: true do |t|
     t.string   "name"
@@ -121,7 +118,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "events", ["location_id"], name: "index_events_on_location_id", using: :btree
+  add_index "events", ["location_id"], name: "index_events_on_location_id"
 
   create_table "info_enquiries", force: true do |t|
     t.string   "email"
@@ -148,8 +145,8 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "intakes", ["course_id"], name: "index_intakes_on_course_id", using: :btree
-  add_index "intakes", ["location_id"], name: "index_intakes_on_location_id", using: :btree
+  add_index "intakes", ["course_id"], name: "index_intakes_on_course_id"
+  add_index "intakes", ["location_id"], name: "index_intakes_on_location_id"
 
   create_table "locations", force: true do |t|
     t.string   "name"
@@ -179,7 +176,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "payments", ["user_id"], name: "index_payments_on_user_id", using: :btree
+  add_index "payments", ["user_id"], name: "index_payments_on_user_id"
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -196,8 +193,8 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+  add_index "posts", ["category_id"], name: "index_posts_on_category_id"
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "profiles", force: true do |t|
     t.string   "name"
@@ -216,7 +213,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "referral_enrolments", force: true do |t|
     t.integer  "referrer_id"
@@ -228,8 +225,8 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "referral_enrolments", ["enrolment_id"], name: "index_referral_enrolments_on_enrolment_id", using: :btree
-  add_index "referral_enrolments", ["referrer_id"], name: "index_referral_enrolments_on_referrer_id", using: :btree
+  add_index "referral_enrolments", ["enrolment_id"], name: "index_referral_enrolments_on_enrolment_id"
+  add_index "referral_enrolments", ["referrer_id"], name: "index_referral_enrolments_on_referrer_id"
 
   create_table "referral_visits", force: true do |t|
     t.integer  "referrer_id"
@@ -238,7 +235,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "referral_visits", ["referrer_id"], name: "index_referral_visits_on_referrer_id", using: :btree
+  add_index "referral_visits", ["referrer_id"], name: "index_referral_visits_on_referrer_id"
 
   create_table "referrers", force: true do |t|
     t.integer  "user_id"
@@ -250,7 +247,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "referrers", ["user_id"], name: "index_referrers_on_user_id", using: :btree
+  add_index "referrers", ["user_id"], name: "index_referrers_on_user_id"
 
   create_table "skill_groups", force: true do |t|
     t.string   "name"
@@ -283,8 +280,8 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "specials", ["course_id"], name: "index_specials_on_course_id", using: :btree
-  add_index "specials", ["intake_id"], name: "index_specials_on_intake_id", using: :btree
+  add_index "specials", ["course_id"], name: "index_specials_on_course_id"
+  add_index "specials", ["intake_id"], name: "index_specials_on_intake_id"
 
   create_table "testimonials", force: true do |t|
     t.string   "name"
@@ -297,7 +294,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "testimonials", ["course_id"], name: "index_testimonials_on_course_id", using: :btree
+  add_index "testimonials", ["course_id"], name: "index_testimonials_on_course_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -320,10 +317,10 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
 
   create_table "workshops", force: true do |t|
     t.string   "name"
@@ -343,7 +340,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "updated_at"
   end
 
-  add_index "workshops", ["skill_group_id"], name: "index_workshops_on_skill_group_id", using: :btree
-  add_index "workshops", ["skill_level_id"], name: "index_workshops_on_skill_level_id", using: :btree
+  add_index "workshops", ["skill_group_id"], name: "index_workshops_on_skill_group_id"
+  add_index "workshops", ["skill_level_id"], name: "index_workshops_on_skill_level_id"
 
 end

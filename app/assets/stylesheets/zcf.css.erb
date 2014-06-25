@@ -1,8 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Montserrat:400,700);
 /* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -79,8 +84,9 @@ body {
   }
 }
 body {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 20px;
+	font-family: 'Droid Serif', serif;
+  font-weight: 400;
+	font-size: 18px;
 	line-height: 1.5em;
 	padding-top: 50px;
 	-webkit-font-smoothing: antialiased !important;	
@@ -95,17 +101,39 @@ h2 {
 }
 .navbar-inverse {
   background: #1f2b3a;
+  opacity:0.99;
 }
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #379fe1;
+  background-color: transparent;
+}
+
 .navbar-nav > li > a.apply-link {
  margin-top: 10px;
  padding-top: 5px;
- padding-bottom: 5px;
- margin-left: 5px;
+ padding-bottom: 4px;
+ margin-left: 20px;
  border: 2px white solid;
  color: white;
 }
 li.apply-link a {
 	
+}
+
+.navbar-nav > li > a.apply-link:hover, .navbar-nav > li > a.apply-link:focus {
+ margin-top: 10px;
+ padding-top: 5px;
+ padding-bottom: 4px;
+ margin-left: 20px;
+ border: 2px #379fe1 solid;
+ color: #379fe1;
 }
 
 .logo {
@@ -127,7 +155,7 @@ li.apply-link a {
     margin-top: -50px;
 }
 .hero h2 {
-	font-size:90px;
+	font-size:60px;
 	color: #FFF;
 	/*font-family: 'Comfortaa';*/
 }

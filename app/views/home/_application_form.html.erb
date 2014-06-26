@@ -11,11 +11,8 @@
 				
 					<%= simple_form_for(@course_application) do |f| %>
 					  <%= f.error_notification %>
-					  <h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Apply here</h2>
-					  <div class="form-group">
-					    <%# f.association :course, label: false %>
-					    <%= f.association :intake, label: false, prompt: 'Choose your preferred intake' %>
-					  </div>
+					  <h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
+					  
 					  <div class="row">
 					    <div class="form-group string optional course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="First name" type="text" /></div></div>
 					  
@@ -31,25 +28,24 @@
 					    	<%= f.input :city, label: false, placeholder: 'City', input_html: { class: 'form-control' } %>
 					  	</div>
 					  	<div class=" col-sm-6">
+					    	<%= f.input :country, label: false, priority: [ "Australia" ], input_html: { class: 'form-control' } %>
+					    </div>
+					    </div>
+					  <div class="row">
+					  	<div class=" col-sm-6">
 					    	<%= f.input :age, label: false, placeholder: 'Age', input_html: { class: 'form-control' } %>
 					  </div>
-					  <div class="row">
 					  	<div class=" col-sm-6">
 					    	
 					    	<%= f.input :education, label: false, prompt: 'Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control' } %>
 					  	</div>
-					  	<div class=" col-sm-6">
-					    	<%= f.input :country, label: false, priority: [ "Australia" ], input_html: { class: 'form-control' } %>
-					    </div>
 					  </div>
 					  
-					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5 }%>
+					    <%= f.input :reason , label: 'Why are you applying?', placeholder: 'You want to be a developer, or have an app idea.', input_html: { class: 'form-control', rows: 5 }%>
 					  
-					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', input_html: { class: 'form-control', rows: 5 } %>
+					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Github profile, personal website, etc.', input_html: { class: 'form-control', rows: 5 } %>
 					  
-					    <%= f.input :employed, label: false, inline_label: 'Are you currently employed?' %>
-					  
-					    <%= f.input :referral, label: false, placeholder: 'How did you find out about us?', input_html: { class: 'form-control' } %>
+					    <%= f.input :referral, label: false, placeholder: 'How did you find out about us? eg. friend, Google, Facebook, Twitter, other...', input_html: { class: 'form-control' } %>
 					  
 
 					  <div class="form-actions text-right">

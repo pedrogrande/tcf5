@@ -7,9 +7,9 @@
 			<div class="col-md-4 col-md-offset-4">
 				<img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
 			</div>
-			<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-10 col-md-offset-1" id="app-form">
 				
-					<%= simple_form_for(@course_application) do |f| %>
+					<%= simple_form_for(@course_application, remote: true) do |f| %>
 					  <%= f.error_notification %>
 					  <h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
 					  
@@ -45,16 +45,26 @@
 					  
 					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Github profile, personal website, etc.', input_html: { class: 'form-control', rows: 5 } %>
 					  
-					    <%= f.input :referral, label: false, placeholder: 'How did you find out about us? eg. friend, Google, Facebook, Twitter, other...', input_html: { class: 'form-control' } %>
-					  
-
-					  <div class="form-actions text-right">
+					    <%= f.input :referral, label: false, placeholder: 'How did you find us? (friend, Google, Facebook, Twitter, other..)', input_html: { class: 'form-control' } %>
+					  <div class="form-group">
+					    <%# f.association :course, label: false %>
+					    <%= f.association :intake, label: false, prompt: 'Choose your preferred intake' %>
+					  </div>
+					  <div id="form-submission"></div>
+					  <div class="form-actions text-center">
 					    <%= f.submit 'Apply', class: 'btn btn-default btn-lg' %>
 					  </div>
 					<% end %>
-
+					
 					<br><br>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+$(document).ready ->
+  $("#form-submission").on("ajax:success", (e, data, status, xhr) ->
+    $("#form-submission").append xhr.responseText
+  ).on "ajax:error", (e, xhr, status, error) ->
+    $("#form-submission").append "<p>ERROR</p>"
+	</script>

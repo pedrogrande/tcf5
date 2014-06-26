@@ -1,5 +1,6 @@
 class CourseApplicationsController < ApplicationController
   before_action :set_course_application, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js
 
   # GET /course_applications
   # GET /course_applications.json
@@ -25,14 +26,13 @@ class CourseApplicationsController < ApplicationController
   # POST /course_applications.json
   def create
     @course_application = CourseApplication.new(course_application_params)
+    # @course_application.course = @course_application.intake.course
 
     respond_to do |format|
       if @course_application.save
-        format.html { redirect_to @course_application, notice: 'Course application was successfully created.' }
-        format.json { render :show, status: :created, location: @course_application }
+        format.js
       else
-        format.html { render :new }
-        format.json { render json: @course_application.errors, status: :unprocessable_entity }
+        @error='Could not accept application'
       end
     end
   end

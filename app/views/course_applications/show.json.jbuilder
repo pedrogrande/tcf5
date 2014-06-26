@@ -1,0 +1,1 @@
+json.extract! @course_application, :id, :course_id, :intake_id, :first_name, :last_name, :email, :phone, :reason, :experience, :education, :age, :city, :country, :employed, :referral, :created_at, :updated_at

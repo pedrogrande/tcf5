@@ -1,0 +1,64 @@
+<div id="application-form">
+
+	<br><br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
+			</div>
+			<div class="col-md-10 col-md-offset-1">
+				
+					<%= simple_form_for(@course_application) do |f| %>
+					  <%= f.error_notification %>
+					  <h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Apply here</h2>
+					  <div class="form-group">
+					    <%# f.association :course, label: false %>
+					    <%= f.association :intake, label: false, prompt: 'Choose your preferred intake' %>
+					  </div>
+					  <div class="row">
+					    <div class="form-group string optional course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="First name" type="text" /></div></div>
+					  
+					    <div class="form-group string optional course_application_last_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_last_name" name="course_application[last_name]" placeholder="Last name" type="text" /></div></div>
+					  </div>
+					  <div class="row">
+					    <div class="form-group email optional course_application_email col-sm-6"><div><input class="string email optional form-control form-control" id="course_application_email" name="course_application[email]" placeholder="Email" type="email" /></div></div>
+					  
+					    <div class="form-group tel optional course_application_phone col-sm-6"><div><input class="string tel optional form-control form-control" id="course_application_phone" name="course_application[phone]" placeholder="Phone" type="tel" /></div></div>
+					  </div>
+					  <div class="row">
+					  	<div class=" col-sm-6">
+					    	<%= f.input :city, label: false, placeholder: 'City', input_html: { class: 'form-control' } %>
+					  	</div>
+					  	<div class=" col-sm-6">
+					    	<%= f.input :age, label: false, placeholder: 'Age', input_html: { class: 'form-control' } %>
+					  </div>
+					  <div class="row">
+					  	<div class=" col-sm-6">
+					    	
+					    	<%= f.input :education, label: false, prompt: 'Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control' } %>
+					  	</div>
+					  	<div class=" col-sm-6">
+					    	<%= f.input :country, label: false, priority: [ "Australia" ], input_html: { class: 'form-control' } %>
+					    </div>
+					  </div>
+					  
+					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5 }%>
+					  
+					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', input_html: { class: 'form-control', rows: 5 } %>
+					  
+					    <%= f.input :employed, label: false, inline_label: 'Are you currently employed?' %>
+					  
+					    <%= f.input :referral, label: false, placeholder: 'How did you find out about us?', input_html: { class: 'form-control' } %>
+					  
+
+					  <div class="form-actions text-right">
+					    <%= f.submit 'Apply', class: 'btn btn-default btn-lg' %>
+					  </div>
+					<% end %>
+
+					<br><br>
+				</div>
+			</div>
+		</div>
+	</div>

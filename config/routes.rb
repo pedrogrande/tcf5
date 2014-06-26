@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+
+  resources :course_applications
+
   resources :info_enquiries
 
   resources :referral_enrolments

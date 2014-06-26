@@ -1,0 +1,24 @@
+<%= simple_form_for(@course_application) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :course %>
+    <%= f.association :intake %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :reason %>
+    <%= f.input :experience %>
+    <%= f.input :education %>
+    <%= f.input :age %>
+    <%= f.input :city %>
+    <%= f.input :country %>
+    <%= f.input :employed %>
+    <%= f.input :referral %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

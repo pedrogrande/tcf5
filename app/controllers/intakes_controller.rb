@@ -25,6 +25,7 @@ class IntakesController < ApplicationController
   # POST /intakes.json
   def create
     @intake = Intake.new(intake_params)
+    @intake.title = @intake.date.strftime('%B') + ' to ' + @intake.end_date.strftime('%B') + ': ' + @intake.day + ' (' + @intake.location.name + ', ' + @intake.location.city + ')'
 
     respond_to do |format|
       if @intake.save

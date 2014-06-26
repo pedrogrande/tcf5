@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625013323) do
+ActiveRecord::Schema.define(version: 20140625123940) do
 
   create_table "banners", force: true do |t|
     t.string   "name"
@@ -29,6 +29,28 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "course_applications", force: true do |t|
+    t.integer  "course_id"
+    t.integer  "intake_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "reason"
+    t.text     "experience"
+    t.string   "education"
+    t.string   "age"
+    t.string   "city"
+    t.string   "country"
+    t.boolean  "employed"
+    t.string   "referral"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "course_applications", ["course_id"], name: "index_course_applications_on_course_id"
+  add_index "course_applications", ["intake_id"], name: "index_course_applications_on_intake_id"
 
   create_table "course_workshops", force: true do |t|
     t.integer  "course_id"
@@ -143,6 +165,7 @@ ActiveRecord::Schema.define(version: 20140625013323) do
     t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   add_index "intakes", ["course_id"], name: "index_intakes_on_course_id"

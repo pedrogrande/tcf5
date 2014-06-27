@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record
 # gem 'pg'
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -44,6 +44,7 @@ group :development do
   gem "better_errors"
   gem 'quiet_assets'
   gem 'seed_dump'
+  gem 'sqlite3'
 end
 
 group :production do

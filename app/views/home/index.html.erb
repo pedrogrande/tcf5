@@ -4,10 +4,8 @@
 
 	<div class="section">
 		<%= render 'hero' %>
-
-		<div class="dark-blue">
-		</div>
 	</div>
+		
 
 
 	<div class="section">
@@ -43,7 +41,7 @@ $(document).ready(function() {
         // slidesColor : ['#ccc', '#fff'],
         anchors:['home', 'coder-factory', 'course', 'schedule', 'team', 'faq'],
         scrollingSpeed: 1700,
-        easing: 'easeInOutExpo',
+        easing: 'easeOutSine',
         touchSensitivity: 6,
         paddingTop: 0
     });
@@ -64,7 +62,7 @@ $(document).ready(function() {
 		padding : 0,
 		openEffect : 'elastic',
 		openSpeed : 1000,
-		openEasing : 'easeInOutQuart'
+		openEasing : 'easeInCubic'
 	});
 });
 </script>

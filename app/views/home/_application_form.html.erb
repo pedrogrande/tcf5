@@ -14,18 +14,18 @@
 					  <h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
 					  
 					  <div class="row">
-					    <div class="form-group string optional course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="First name" type="text" /></div></div>
+					    <div class="form-group string optional course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" /></div></div>
 					  
-					    <div class="form-group string optional course_application_last_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_last_name" name="course_application[last_name]" placeholder="Last name" type="text" /></div></div>
+					    <div class="form-group string optional course_application_last_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_last_name" name="course_application[last_name]" placeholder="* Last name" type="text" /></div></div>
 					  </div>
 					  <div class="row">
-					    <div class="form-group email optional course_application_email col-sm-6"><div><input class="string email optional form-control form-control" id="course_application_email" name="course_application[email]" placeholder="Email" type="email" /></div></div>
+					    <div class="form-group email optional course_application_email col-sm-6"><div><input class="string email optional form-control form-control" id="course_application_email" name="course_application[email]" placeholder="* Email" type="email" /></div></div>
 					  
-					    <div class="form-group tel optional course_application_phone col-sm-6"><div><input class="string tel optional form-control form-control" id="course_application_phone" name="course_application[phone]" placeholder="Phone" type="tel" /></div></div>
+					    <div class="form-group tel optional course_application_phone col-sm-6"><div><input class="string tel optional form-control form-control" id="course_application_phone" name="course_application[phone]" placeholder="* Phone" type="tel" /></div></div>
 					  </div>
 					  <div class="row">
 					  	<div class=" col-sm-6">
-					    	<%= f.input :city, label: false, placeholder: 'City', input_html: { class: 'form-control' } %>
+					    	<%= f.input :city, label: false, placeholder: '* City', input_html: { class: 'form-control' } %>
 					  	</div>
 					  	<div class=" col-sm-6">
 					    	<%= f.input :country, label: false, priority: [ "Australia" ], input_html: { class: 'form-control' } %>
@@ -33,11 +33,11 @@
 					    </div>
 					  <div class="row">
 					  	<div class=" col-sm-6">
-					    	<%= f.input :age, label: false, placeholder: 'Age', input_html: { class: 'form-control' } %>
+					    	<%= f.input :age, label: false, placeholder: '* Age', input_html: { class: 'form-control' } %>
 					  </div>
 					  	<div class=" col-sm-6">
 					    	
-					    	<%= f.input :education, label: false, prompt: 'Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control' } %>
+					    	<%= f.input :education, label: false, prompt: '* Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control' } %>
 					  	</div>
 					  </div>
 					  

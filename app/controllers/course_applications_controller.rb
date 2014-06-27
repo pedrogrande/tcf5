@@ -1,6 +1,6 @@
 class CourseApplicationsController < ApplicationController
   before_action :set_course_application, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :js
+  
 
   # GET /course_applications
   # GET /course_applications.json
@@ -30,9 +30,11 @@ class CourseApplicationsController < ApplicationController
 
     respond_to do |format|
       if @course_application.save
-        format.js
+        format.html { redirect_to thanks_path}
+        format.json { render :show, status: :created, location: @course_application }
       else
-        @error='Could not accept application'
+        format.html { render :new }
+        format.json { render json: @course_application.errors, status: :unprocessable_entity }
       end
     end
   end

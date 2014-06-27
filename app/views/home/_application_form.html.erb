@@ -8,45 +8,43 @@
 				<img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
 			</div>
 			<div class="col-md-10 col-md-offset-1" id="app-form">
-				
-					<%= simple_form_for(@course_application, remote: true) do |f| %>
+				<h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
+					<%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application', novalidate: false }) do |f| %>
 					  <%= f.error_notification %>
-					  <h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
-					  
 					  <div class="row">
-					    <div class="form-group string optional course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" /></div></div>
+					    <div class="form-group string optional course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" data-validation="required" /><span class="help-block"></span></div></div>
 					  
-					    <div class="form-group string optional course_application_last_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_last_name" name="course_application[last_name]" placeholder="* Last name" type="text" /></div></div>
+					    <div class="form-group string optional course_application_last_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_last_name" name="course_application[last_name]" placeholder="* Last name" type="text" data-validation="required" /></div></div>
 					  </div>
 					  <div class="row">
-					    <div class="form-group email optional course_application_email col-sm-6"><div><input class="string email optional form-control form-control" id="course_application_email" name="course_application[email]" placeholder="* Email" type="email" /></div></div>
+					    <div class="form-group email optional course_application_email col-sm-6"><div><input class="string email optional form-control form-control" id="course_application_email" name="course_application[email]" placeholder="* Email" type="email"  data-validation="required" data-validation="email" /></div></div>
 					  
-					    <div class="form-group tel optional course_application_phone col-sm-6"><div><input class="string tel optional form-control form-control" id="course_application_phone" name="course_application[phone]" placeholder="* Phone" type="tel" /></div></div>
+					    <div class="form-group tel optional course_application_phone col-sm-6"><div><input class="string tel optional form-control form-control" id="course_application_phone" name="course_application[phone]" placeholder="* Phone" type="tel" data-validation="required" /></div></div>
 					  </div>
 					  <div class="row">
 					  	<div class=" col-sm-6">
-					    	<%= f.input :city, label: false, placeholder: '* City', input_html: { class: 'form-control' } %>
+					    	<%= f.input :city, label: false, placeholder: '* City', input_html: { class: 'form-control', data: { validation: 'required'} } %>
 					  	</div>
 					  	<div class=" col-sm-6">
-					    	<%= f.input :country, label: false, priority: [ "Australia" ], input_html: { class: 'form-control' } %>
+					    	<%= f.input :country, label: false, priority: [ "Australia" ], input_html: { class: 'form-control', data: { validation: 'required'}  } %>
 					    </div>
 					    </div>
 					  <div class="row">
 					  	<div class=" col-sm-6">
-					    	<%= f.input :age, label: false, placeholder: '* Age', input_html: { class: 'form-control' } %>
+					    	<%= f.input :age, label: false, placeholder: '* Age', input_html: { class: 'form-control', data: { validation: 'required'}  } %>
 					  </div>
 					  	<div class=" col-sm-6">
 					    	
-					    	<%= f.input :education, label: false, prompt: '* Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control' } %>
+					    	<%= f.input :education, label: false, prompt: '* Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control', data: { validation: 'required'}  } %>
 					  	</div>
 					  </div>
 					  
-					    <%= f.input :reason , label: 'Why are you applying?', placeholder: 'You want to be a developer, or have an app idea.', input_html: { class: 'form-control', rows: 5 }%>
+					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  }%>
 					  
-					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Github profile, personal website, etc.', input_html: { class: 'form-control', rows: 5 } %>
+					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Include your Github profile, personal website if applicable', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  } %>
 					  <div class="form-group">
 					    <%# f.association :course, label: false %>
-					    <%= f.association :intake, label: false, prompt: 'Choose your preferred intake' %>
+					    <%= f.association :intake, label: false, prompt: '* Choose your preferred intake' %>
 					  </div>
 					    <%= f.input :referral, label: false, placeholder: 'How did you find us? (friend, Google, Facebook, Twitter, other..)', input_html: { class: 'form-control' } %>
 					  <div id="form-submission"></div>
@@ -60,10 +58,11 @@
 			</div>
 		</div>
 	</div>
-	<script>
-$(document).ready ->
-  $("#form-submission").on("ajax:success", (e, data, status, xhr) ->
-    $("#form-submission").append xhr.responseText
-  ).on "ajax:error", (e, xhr, status, error) ->
-    $("#form-submission").append "<p>ERROR</p>"
-	</script>
+
+<script>
+$(document).ready(function() {
+  $.validate({
+  form : '#course-application'
+});
+  )};
+</script>

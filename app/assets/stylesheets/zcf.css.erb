@@ -108,6 +108,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+
+	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -moz-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -o-transition: color 1s ease-in-out, border 1s ease-in-out;
+  transition: color 1s ease-in-out, border 1s ease-in-out;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
@@ -221,6 +226,10 @@ li.apply-link a {
 	background: transparent;
 	color: #1f2b3a;
 	font-family: 'Montserrat';
+	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -moz-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -o-transition: color 1s ease-in-out, border 1s ease-in-out;
+  transition: color 1s ease-in-out, border 1s ease-in-out;
 }
 .btn-default:hover {
 	border: 2px #00AEFF solid;
@@ -232,6 +241,11 @@ li.apply-link a {
 	background: transparent;
 	color: #fff;
 	font-family: 'Montserrat';
+
+	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -moz-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -o-transition: color 1s ease-in-out, border 1s ease-in-out;
+  transition: color 1s ease-in-out, border 1s ease-in-out;
 }
 .btn-white:hover {
 	border: 2px #00AEFF solid;
@@ -403,6 +417,15 @@ label {
 
 	font-weight: bold;
 	font-size: 1.3em;
+	
+	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -moz-transition: color 1s ease-in-out, border 1s ease-in-out;
+  -o-transition: color 1s ease-in-out, border 1s ease-in-out;
+  transition: color 1s ease-in-out, border 1s ease-in-out;
+}
+.panel-default > .panel-heading a:hover {
+	color: #00AEFF;
+	text-decoration: none;
 }
 .panel-default > .panel-heading + .panel-collapse .panel-body {
 	border-top-color: #dddddd;
@@ -452,7 +475,6 @@ transform: scale(1, 1);
 
 #down-arrow {
 	background: transparent;
-	/*background-size: cover;*/
 	width: 80px;
 	height: 80px;
 	-webkit-animation: pulse 2s linear infinite;
@@ -462,4 +484,32 @@ transform: scale(1, 1);
 #down-arrow:hover {
 	-webkit-animation: none;
 	animation:none;
+}
+.mega {
+	font-size: 300%;
+	font-weight: bold;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	padding: .2em .3em;
+}
+.label {
+	border-radius: 0;
+	
+}
+.label-default {
+	background: transparent;
+	color: #1f2b3a;
+	border: 2px #1f2b3a solid;
+	font-family: 'Montserrat';
+	-webkit-transition: background-color 1s ease-in-out;
+  -moz-transition: background-color 1s ease-in-out;
+  -o-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+}
+.label-default:hover {
+	background: #00AEFF;
+	color: #1f2b3a;
+	border: 2px #1f2b3a solid;
+	font-family: 'Montserrat';
 }

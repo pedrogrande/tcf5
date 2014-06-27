@@ -44,12 +44,11 @@
 					    <%= f.input :reason , label: 'Why are you applying?', placeholder: 'You want to be a developer, or have an app idea.', input_html: { class: 'form-control', rows: 5 }%>
 					  
 					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Github profile, personal website, etc.', input_html: { class: 'form-control', rows: 5 } %>
-					  
-					    <%= f.input :referral, label: false, placeholder: 'How did you find us? (friend, Google, Facebook, Twitter, other..)', input_html: { class: 'form-control' } %>
 					  <div class="form-group">
 					    <%# f.association :course, label: false %>
 					    <%= f.association :intake, label: false, prompt: 'Choose your preferred intake' %>
 					  </div>
+					    <%= f.input :referral, label: false, placeholder: 'How did you find us? (friend, Google, Facebook, Twitter, other..)', input_html: { class: 'form-control' } %>
 					  <div id="form-submission"></div>
 					  <div class="form-actions text-center">
 					    <%= f.submit 'Apply', class: 'btn btn-default btn-lg' %>

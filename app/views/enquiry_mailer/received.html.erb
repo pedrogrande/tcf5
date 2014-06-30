@@ -1,4 +1,29 @@
-<h1>EnquiryMailer#received</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Enquiry received</h1>
+    
+    <table class="table">
+      <tr>
+        <th>Name:</th>
+        <td><%= @info_enquiry.first_name %></td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td><%= @info_enquiry.email %></td>
+      </tr>
+      </tr>
+      <tr>
+        <th>Link to info_enquiry</th>
+        <td><%= link_to 'Enquiry', info_enquiry_url(@info_enquiry) %></td>
+      </tr>
+      
+    </table>
+  </body>
+</html><h1>EnquiryMailer#received</h1>
 
 <p>
   <%= @greeting %>, find me in app/views/enquiry_mailer/received.html.erb

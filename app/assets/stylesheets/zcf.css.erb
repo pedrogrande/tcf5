@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Montserrat:400,700);
 /* Space out content a bit */
 body {
+	font-size: 14px;
+}
+@media (min-width: 768px) {
+body {
 	font-family: 'Droid Serif', serif;
   font-weight: 400;
 	font-size: 18px;
@@ -9,11 +13,18 @@ body {
 	-webkit-font-smoothing: antialiased !important;	
 	color: #1f2b3a;
 }
+
+h2 {
+	font-size: 60px;
+	line-height: 1.5em;
+	padding-bottom: 40px;
+}
+
 p {
 	padding-bottom: 20px;
 }
 h2 {
-	font-size: 60px;
+	font-size: 40px;
 	line-height: 1.5em;
 	padding-bottom: 40px;
 }
@@ -516,4 +527,5 @@ transform: scale(1, 1);
 .white-panel {
 	background: white;
 	padding: 20px 0;
+}
 }

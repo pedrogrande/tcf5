@@ -32,7 +32,47 @@ loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure"
 /* custom configuration goes here (www.olark.com/documentation) */
 olark.identify('7561-481-10-2927');/*]]>*/</script><noscript><a href="https://www.olark.com/site/7561-481-10-2927/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
 <!-- end olark code -->
-  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43181031-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<!-- Add the following three tags inside head. -->
+    <meta itemprop="name" content="<%= content_for?(:title) ? yield(:title) : 'Web Application Development Articles - Coder Factory Blog' %>">
+    <meta itemprop="description" content="<%= content_for?(:description) ? yield(:description) : 'Coder Factory' %>">
+    <meta itemprop="image" content="<%= content_for?(:image) ? yield(:image) : asset_path('logo22.png') %>">
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@coderfactory">
+    <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'Web Development Articles - Coder Factory Blog' %>">
+    <meta name="twitter:description" content="<%= content_for?(:description) ? yield(:description) : 'Coder Factory' %>">
+    <meta name="twitter:creator" content="<%= content_for?(:author) ? yield(:author) : '@coderfactory' %>">
+    <meta name="twitter:image:src" content="<%= content_for?(:image) ? yield(:image) : asset_path('logo22.png') %>">
+    <!-- Open Graph -->
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'Web Application Development Articles - Coder Factory Blog' %>" />
+    <meta property="og:image" content="<%= content_for?(:image) ? yield(:image) : asset_path('logo22.png') %>" /> 
+    <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : 'Coder Factory' %>" /> 
 </head>
 <body>
 

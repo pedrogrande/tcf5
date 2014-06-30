@@ -28,11 +28,10 @@ class InfoEnquiriesController < ApplicationController
 
     respond_to do |format|
       if @info_enquiry.save
-        format.html { redirect_to @info_enquiry, notice: 'Info enquiry was successfully created.' }
+        InfoEnquiryMailerJob.new.async.perform(@info_enquiry.id)
+        format.html { redirect_to :back }
         format.json { render :show, status: :created, location: @info_enquiry }
-      else
-        format.html { render :new }
-        format.json { render json: @info_enquiry.errors, status: :unprocessable_entity }
+      
       end
     end
   end

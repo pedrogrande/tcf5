@@ -30,6 +30,7 @@ class CourseApplicationsController < ApplicationController
 
     respond_to do |format|
       if @course_application.save
+        CourseApplicationMailerJob.new.async.perform(@course_application.id)
         format.html { redirect_to thanks_path}
         format.json { render :show, status: :created, location: @course_application }
       else

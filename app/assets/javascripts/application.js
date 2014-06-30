@@ -3,6 +3,7 @@
 //= require bootstrap
 //= require jquery.adaptive-modal.min.js
 //= require jquery.easing.1.3.min.js
+//= require jquery.slimscroll.min.js
 //= require jquery.fullPage.min.js
 //= require jquery.fancybox.pack.js
 //= require jquery.fancybox-media.js

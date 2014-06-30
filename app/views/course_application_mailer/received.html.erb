@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Application received</h1>
+    	<p>
+    	  <strong>First name:</strong>
+    	  <%= @course_application.first_name %>
+    	</p>
+
+    	<p>
+    	  <strong>Last name:</strong>
+    	  <%= @course_application.last_name %>
+    	</p>
+    	<p>
+    	  <strong>Phone:</strong>
+    	  <%= @course_application.phone %>
+    	</p>
+
+    	<p>
+    	  <strong>Email:</strong>
+    	  <%= @course_application.email %>
+    	</p>
+
+    	
+    	<p>
+    	  <strong>Country:</strong>
+    	  <%= @course_application.country %>
+    	</p>
+
+    	<p>
+    	  <strong>City:</strong>
+    	  <%= @course_application.city %>
+    	</p>
+
+    	<p>
+    	  <strong>Age:</strong>
+    	  <%= @course_application.age %>
+    	</p>
+    	<p>
+    	  <strong>Education:</strong>
+    	  <%= @course_application.education %>
+    	</p>
+    	<p>
+    	  <strong>Programming experience:</strong>
+    	  <%= @course_application.experience %>
+    	</p>
+
+    	<p><strong>Reason for wanting to learn to code</strong>
+    	<%= @course_application.reason %>
+    	</p>
+
+
+    	<p>
+    	  <strong>Weekend programme:</strong>
+    	  <%= @course_application.intake.location.city %>
+    	</p>
+
+    	
+
+    	<%= link_to 'Link to course_application', enrolment_url(@course_application) %>
+
+
+  </body>
+</html>

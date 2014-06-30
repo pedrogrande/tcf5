@@ -127,6 +127,10 @@ h1, h2, h3, h4, h5, h6 {
  margin-left: 20px;
  border: 2px white solid;
  color: white;
+ -webkit-transition: color 1s ease-in-out, background 1s ease-in-out;
+  -moz-transition: color 1s ease-in-out, background 1s ease-in-out;
+  -o-transition: color 1s ease-in-out, background 1s ease-in-out;
+  transition: color 1s ease-in-out, background 1s ease-in-out;
 }
 li.apply-link a {
 	
@@ -137,8 +141,10 @@ li.apply-link a {
  padding-top: 5px;
  padding-bottom: 4px;
  margin-left: 20px;
- border: 2px #379fe1 solid;
- color: #379fe1;
+
+ background: #00AEFF;
+	color: #fff;
+	border: 2px #fff solid;
 }
 
 .logo {
@@ -226,15 +232,16 @@ li.apply-link a {
 	background: transparent;
 	color: #1f2b3a;
 	font-family: 'Montserrat';
-	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
-  -moz-transition: color 1s ease-in-out, border 1s ease-in-out;
-  -o-transition: color 1s ease-in-out, border 1s ease-in-out;
-  transition: color 1s ease-in-out, border 1s ease-in-out;
+	-webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .btn-default:hover {
-	border: 2px #00AEFF solid;
-	background: transparent;
-	color: #00AEFF;
+	background: #00AEFF;
+	color: #1f2b3a;
+	border: 2px #1f2b3a solid;
+	font-family: 'Montserrat';
 }
 .btn-white {
 	border: 2px #fff solid;
@@ -242,15 +249,16 @@ li.apply-link a {
 	color: #fff;
 	font-family: 'Montserrat';
 
-	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
-  -moz-transition: color 1s ease-in-out, border 1s ease-in-out;
-  -o-transition: color 1s ease-in-out, border 1s ease-in-out;
-  transition: color 1s ease-in-out, border 1s ease-in-out;
+	-webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .btn-white:hover {
-	border: 2px #00AEFF solid;
-	background: transparent;
-	color: #00AEFF;
+	background: #00AEFF;
+	color: #fff;
+	border: 2px #fff solid;
+	font-family: 'Montserrat';
 }
 .nav {
 	padding-top: 5px;
@@ -504,4 +512,8 @@ transform: scale(1, 1);
 	color: #fff;
 	border: 2px #fff solid;
 	font-family: 'Montserrat';
+}
+.white-panel {
+	background: white;
+	padding: 20px 0;
 }

@@ -2,44 +2,25 @@
 
 <div id="main">
 
-	<div class="section">
-		<%= render 'hero' %>
-	</div>
-		
+	<%= render 'hero' %>
 
+	<%= render 'about' %>
 
-	<div class="section">
-		<%= render 'about' %>
-	</div>
-
-	<div class="section" data-anchor="course" id="section2">
-		<%= render 'course' %>
-	</div>
-
-	<div class="section" data-anchor="schedule" id="section3">
-		<%= render 'schedule' %>
-	</div>
-<div class="section" data-anchor="team" id="section4">
-	<%= render 'team' %>
-</div>
-
-
-<div class="section" data-anchor="faq" id="section5">
-<%= render 'faq' %>
-</div>
-<div class="section" data-anchor="numbers" id="section6">
-<%= render 'numbers' %>
-</div>
-<div class="section" data-anchor="apply" id="section7">
-<%= render 'application_form' %>
-</div>
-<div class="section" data-anchor="footer" id="section8">
-
-<%= render 'footer' %>
+	<%= render 'course' %>
 	
-</div>
+	<%= render 'schedule' %>
+	
+	<%= render 'team' %>
 
-<%= render 'enquiry_form' %>
+	<%= render 'faq' %>
+	
+	<%= render 'numbers' %>
+	
+	<%= render 'application_form' %>
+	
+	<%= render 'footer' %>
+	
+	<%= render 'enquiry_form' %>
 
 
 <script>
@@ -48,10 +29,13 @@ $(document).ready(function() {
         verticalCentered: false,
         resize : false,
         // slidesColor : ['#ccc', '#fff'],
-        anchors:['home', 'coder-factory', 'course', 'schedule', 'team', 'faq'],
+        anchors:['home', 'coder-factory', 'course', 'schedule', 'team', 'faq', 'numbers', 'apply', 'contact'],
         scrollingSpeed: 1700,
         easing: 'easeOutSine',
         touchSensitivity: 6,
+        css3 : true,
+        fixedElements : '.navbar',
+        scrollOverflow : false,
         paddingTop: 0
     });
 });

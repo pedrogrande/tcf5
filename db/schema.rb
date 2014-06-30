@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625123940) do
+ActiveRecord::Schema.define(version: 20140630044059) do
 
   create_table "banners", force: true do |t|
     t.string   "name"
@@ -47,10 +47,12 @@ ActiveRecord::Schema.define(version: 20140625123940) do
     t.string   "referral"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "referrer_id"
   end
 
   add_index "course_applications", ["course_id"], name: "index_course_applications_on_course_id"
   add_index "course_applications", ["intake_id"], name: "index_course_applications_on_intake_id"
+  add_index "course_applications", ["referrer_id"], name: "index_course_applications_on_referrer_id"
 
   create_table "course_workshops", force: true do |t|
     t.integer  "course_id"

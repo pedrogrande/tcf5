@@ -1,5 +1,4 @@
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery.adaptive-modal.min.js
@@ -7,5 +6,4 @@
 //= require jquery.fullPage.min.js
 //= require jquery.fancybox.pack.js
 //= require jquery.fancybox-media.js
-//= require jquery.form-validator.min.js
-//= require turbolinks
+//= require jquery.form.min.js

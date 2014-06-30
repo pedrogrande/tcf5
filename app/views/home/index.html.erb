@@ -27,16 +27,20 @@
 <div class="section" data-anchor="faq" id="section5">
 <%= render 'faq' %>
 </div>
-<div class="section" data-anchor="footer" id="section6">
+<div class="section" data-anchor="numbers" id="section6">
+<%= render 'numbers' %>
+</div>
+<div class="section" data-anchor="apply" id="section7">
+<%= render 'application_form' %>
+</div>
+<div class="section" data-anchor="footer" id="section8">
 
-	
-		
-			
-		<%= render 'footer' %>
+<%= render 'footer' %>
 	
 </div>
+
 <%= render 'enquiry_form' %>
-<%= render 'application_form' %>
+
 
 <script>
 $(document).ready(function() {
@@ -66,7 +70,7 @@ $(document).ready(function() {
 		closeEffect	: 'none',
 		padding : 0,
 		openEffect : 'elastic',
-		openSpeed : 1000,
+		openSpeed : 500,
 		openEasing : 'easeInCubic'
 	});
 });

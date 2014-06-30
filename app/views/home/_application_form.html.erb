@@ -1,15 +1,10 @@
-<div id="application-form">
-
-	<br><br>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 col-md-offset-4">
-				<img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
-			</div>
-			<div class="col-md-10 col-md-offset-1" id="app-form">
-				<h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
-					<%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application', novalidate: false }) do |f| %>
+<div class="container-header" style="padding-top: 7%;">
+	<div class="row">
+		<div class="col-xs-12" id="app-form">
+			<h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
+		</div>
+		<div class="col-sm-6">
+					<%= simple_form_for(@course_application, remote: true, html: { id: 'course-application', role: :form, 'data-model' => 'course_application' }) do |f| %>
 					  <%= f.error_notification %>
 					  <div class="row">
 					    <div class="form-group string optional course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" data-validation="required" /><span class="help-block"></span></div></div>
@@ -38,14 +33,20 @@
 					    	<%= f.input :education, label: false, prompt: '* Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control', data: { validation: 'required'}  } %>
 					  	</div>
 					  </div>
-					  
-					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  }%>
-					  
-					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Include your Github profile, personal website if applicable', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  } %>
-					  <div class="form-group">
+					  <div class="row">
+					  <div class="col-sm-12">
+					  	<div class="form-group">
 					    <%# f.association :course, label: false %>
 					    <%= f.association :intake, label: false, prompt: '* Choose your preferred intake' %>
 					  </div>
+					  </div>
+					  </div>
+					</div>
+					<div class="col-sm-6">
+					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  }%>
+					  
+					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Include your Github profile, personal website if applicable', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  } %>
+					  
 					    <%= f.input :referral, label: false, placeholder: 'How did you find us? (friend, Google, Facebook, Twitter, other..)', input_html: { class: 'form-control' } %>
 					  <div id="form-submission"></div>
 					  <div class="form-actions text-center">
@@ -56,13 +57,4 @@
 					<br><br>
 				</div>
 			</div>
-		</div>
-	</div>
-
-<script>
-$(document).ready(function() {
-  $.validate({
-  form : '#course-application'
-});
-  )};
-</script>
+</div>

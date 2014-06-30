@@ -34,7 +34,7 @@ class CourseApplicationsController < ApplicationController
         format.json { render :show, status: :created, location: @course_application }
       else
         format.html { render :new }
-        format.json { render json: @course_application.errors, status: :unprocessable_entity }
+        # format.json { render json: @course_application.errors, status: :unprocessable_entity }
       end
     end
   end

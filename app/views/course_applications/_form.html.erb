@@ -1,12 +1,6 @@
-<div id="application-form">
-
-  <br><br>
-
-  <div class="container">
+<div class="container">
     <div class="row">
-      <div class="col-md-4 col-md-offset-4">
-        <img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
-      </div>
+     
       <div class="col-md-10 col-md-offset-1" id="app-form">
         <h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
           <%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application', novalidate: false }) do |f| %>

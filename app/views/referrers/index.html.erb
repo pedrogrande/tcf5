@@ -1,11 +1,12 @@
 <h1>Listing referrers</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>User</th>
       <th>Name</th>
-      <th>Contact phone</th>
+      <th>Referral visits</th>
+      <th>Referral applications</th>
       <th>Company</th>
       <th>Referral code</th>
       <th colspan="3"></th>
@@ -17,7 +18,8 @@
       <tr>
         <td><%= referrer.user %></td>
         <td><%= referrer.name %></td>
-        <td><%= referrer.contact_phone %></td>
+        <td><%= referrer.referral_visits.count %></td>
+        <td><%= referrer.course_applications.count %></td>
         <td><%= referrer.company %></td>
         <td><%= referrer.referral_code %></td>
         <td><%= link_to 'Show', referrer %></td>

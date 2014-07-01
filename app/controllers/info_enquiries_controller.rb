@@ -1,4 +1,5 @@
 class InfoEnquiriesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create]
   before_action :set_info_enquiry, only: [:show, :edit, :update, :destroy]
 
   # GET /info_enquiries

@@ -1,9 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Montserrat:400,700);
 /* Space out content a bit */
-body {
-	font-size: 14px;
-}
-@media (min-width: 768px) {
+
 body {
 	font-family: 'Droid Serif', serif;
   font-weight: 400;
@@ -23,11 +20,7 @@ h2 {
 p {
 	padding-bottom: 20px;
 }
-h2 {
-	font-size: 40px;
-	line-height: 1.5em;
-	padding-bottom: 40px;
-}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
@@ -496,18 +489,21 @@ transform: scale(1, 1);
 	-webkit-animation: pulse 2s linear infinite;
 	animation: pulse 2s linear infinite;
 }
-.mega {
-	font-size: 300%;
-	font-weight: bold;
-	line-height: 1;
-	color: #fff;
-	text-align: center;
-	padding: .2em .3em;
-}
-.label {
+
+.mylabel {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
 	border-radius: 0;
 	
 }
+
 .label-default {
 	background: transparent;
 	color: #fff;
@@ -524,8 +520,31 @@ transform: scale(1, 1);
 	border: 2px #fff solid;
 	font-family: 'Montserrat';
 }
+.label-mobile {
+	background: transparent;
+	color: #fff;
+	border: 2px #fff solid;
+	font-family: 'Montserrat';
+	-webkit-transition: background-color 1s ease-in-out;
+  -moz-transition: background-color 1s ease-in-out;
+  -o-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+}
+.label-mobile:hover {
+	background: #00AEFF;
+	color: #fff;
+	border: 2px #fff solid;
+	font-family: 'Montserrat';
+}
 .white-panel {
 	background: white;
 	padding: 20px 0;
 }
+.mega {
+	font-size: 300%;
+	font-weight: bold;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	padding: .2em .3em;
 }

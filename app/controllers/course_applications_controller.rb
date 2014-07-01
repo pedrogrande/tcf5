@@ -1,4 +1,5 @@
 class CourseApplicationsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create]
   before_action :set_course_application, only: [:show, :edit, :update, :destroy]
   
 

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= content_for?(:title) ? yield(:title) : "The Coder Factory" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Coder Factory" %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "The Coder Factory" %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "jquery.fullPage.css", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "zcf", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,6 +62,51 @@
 
 		<%= yield %>
     
+
+<%= javascript_include_tag "body" %>
+<script>
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        verticalCentered: false,
+        resize : false,
+        // slidesColor : ['#ccc', '#fff'],
+        anchors:['home', 'coder-factory', 'course', 'schedule', 'team', 'faq', 'numbers', 'apply', 'contact'],
+        scrollingSpeed: 1700,
+        easing: 'easeOutSine',
+        touchSensitivity: 6,
+        css3 : true,
+        fixedElements : '.navbar',
+        scrollOverflow : false,
+        paddingTop: 0
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  $(".various").fancybox({
+    maxWidth  : 800,
+    maxHeight : 600,
+    fitToView : false,
+    width   : '70%',
+    height    : '70%',
+    autoSize  : true,
+    closeClick  : false,
+    openEffect  : 'none',
+    closeEffect : 'none',
+    padding : 0,
+    openEffect : 'elastic',
+    openSpeed : 500,
+    openEasing : 'easeInCubic'
+  });
+});
+</script>
+
+<script>
+$.validate();
+</script>
+
+
 <div class="hidden-xs">
  <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){

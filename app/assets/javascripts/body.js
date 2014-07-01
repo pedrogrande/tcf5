@@ -1,2 +1,3 @@
-//= require jquery.adaptive-modal.min.js
-//= require jquery.onepage-scroll.min.js
+//= require jquery.fullPage.min.js
+//= require jquery.fancybox.pack.js
+//= require jquery.fancybox-media.js

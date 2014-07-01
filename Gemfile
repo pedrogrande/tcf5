@@ -39,6 +39,7 @@ gem 'exception_notification'
 gem 'newrelic_rpm'
 gem 'rails-assets-RRSSB'
 gem "html_truncator", "~>0.2"
+gem "browser"
 # gem 'jquery-turbolinks'
 group :development do
   gem "better_errors"

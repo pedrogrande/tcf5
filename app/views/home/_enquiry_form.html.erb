@@ -4,11 +4,12 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3">
+			<div class="col-sm-6 col-sm-offset-3 col-xs-4 col-xs-offset-4">
 				<img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
 					<%= simple_form_for(@info_enquiry) do |f| %>
 					  <%= f.error_notification %>
 					  <h3 class="text-center">Download the info pack</h3>
+					  <p>Receive our 20 page info pack direct to your inbox.</p>
 					  <hr>
 					  <div class="form-group">
 					    <%= f.input :first_name, label: false, placeholder: '* Your first name', input_html: { class: 'form-control'} %>
@@ -19,6 +20,7 @@
 			  		<%= f.submit 'Download info pack', class: 'btn btn-lg btn-default btn-block' %>
   
 					<% end %>
+
 					<br><br>
 				</div>
 			</div>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'info_thanks' => 'info_thanks#index'
+
   get 'thanks' => 'thanks#index'
 
   resources :course_applications

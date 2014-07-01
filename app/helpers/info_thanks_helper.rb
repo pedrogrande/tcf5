@@ -1,0 +1,2 @@
+module InfoThanksHelper
+end

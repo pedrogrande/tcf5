@@ -30,7 +30,7 @@ class InfoEnquiriesController < ApplicationController
     respond_to do |format|
       if @info_enquiry.save
         InfoEnquiryMailerJob.new.async.perform(@info_enquiry.id)
-        format.html { redirect_to :back }
+        format.html { redirect_to info_thanks_path }
         format.json { render :show, status: :created, location: @info_enquiry }
       
       end

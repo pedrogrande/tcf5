@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3 col-xs-4 col-xs-offset-4">
 				<img src="<%= asset_path 'logo-footer.png' %>" class="img-responsive" >
-					<%= simple_form_for(@info_enquiry) do |f| %>
+					<%= simple_form_for(@info_enquiry, html: { id: 'info-form' }) do |f| %>
 					  <%= f.error_notification %>
 					  <h3 class="text-center">Download the info pack</h3>
 					  <p>Receive our 20 page info pack direct to your inbox.</p>
@@ -20,9 +20,35 @@
 			  		<%= f.submit 'Download info pack', class: 'btn btn-lg btn-default btn-block' %>
   
 					<% end %>
-
+					<a href="#" class="am-trigger-close">Cancel</a>
 					<br><br>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+	$(function() {
+	$('#info-form.[placeholder]').focus(function() {
+		var input = $(this);
+		if (input.val() == input.attr('placeholder')) {
+			input.val('');
+			input.removeClass('placeholder');
+		}
+	}).blur(function() {
+		var input = $(this);
+		if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			input.addClass('placeholder');
+			input.val(input.attr('placeholder'));
+		}
+	}).blur();
+	$('#info-form.[placeholder]').parents('form').submit(function() {
+		$(this).find('[placeholder]').each(function() {
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+				input.val('');
+			}
+		})
+	});
+});
+	
+	</script>

@@ -57,31 +57,14 @@
     <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'Web app development: courses and training @ Coder Factory' %>" />
     <meta property="og:image" content="<%= content_for?(:image) ? yield(:image) : asset_path('logo.png') %>" /> 
     <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : 'See our new improved programmes that help you become a confident coder. Programmes start every month.' %>" /> 
+
+   
 </head>
 <body>
 
 		<%= yield %>
     
 
-
-<script>
-$(document).ready(function() {
-    $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-});
-</script>
 
 <script>
 $(document).ready(function() {
@@ -105,6 +88,7 @@ $(document).ready(function() {
 
 <script>
 $.validate();
+
 </script>
 
 

@@ -1,9 +1,9 @@
-<div class="container-header section" style="padding-top: 7%;" data-anchor="apply" id="apply">
+<div class="container section" style="padding-top: 7%;" data-anchor="apply" id="apply">
 	<div class="row">
 		<div class="col-xs-12" id="app-form">
 			<h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-12">
 					<%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application' }) do |f| %>
 					  <%= f.error_notification %>
 					  <div class="row">
@@ -33,25 +33,25 @@
 					    	<%= f.input :education, label: false, prompt: '* Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control', data: { validation: 'required'}  } %>
 					  	</div>
 					  </div>
-					  <div class="row">
+					  
+					</div>
+					<div class="col-sm-12">
+					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  }%>
+					  
+					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Include your Github profile, personal website if applicable', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  } %>
+					</div>
 					  <div class="col-sm-12">
 					  	<div class="form-group">
 					    <%# f.association :course, label: false %>
 					    <%= f.association :intake, label: false, prompt: '* Choose your preferred intake' %>
 					  </div>
 					  </div>
-					  </div>
-					</div>
-					<div class="col-sm-6">
-					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  }%>
-					  
-					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Include your Github profile, personal website if applicable', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}  } %>
-					  
 					    <%= f.input :referral, label: false, placeholder: 'How did you find us? (friend, Google, Facebook, Twitter, ...)', input_html: { class: 'form-control' } %>
 					    <%= f.input :referrer_id, as: :hidden, input_html: { value: @referrer.id } if @referrer %>
 					  <div id="form-submission"></div>
 					 </div>
 					</div>
+
 					<div class="row">
 					<div class="col-sm-2 col-sm-offset-5">
 					  <div class="form-actions text-center">

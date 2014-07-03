@@ -1,7 +1,8 @@
 <div class="container section" style="padding-top: 7%;" data-anchor="apply" id="apply">
 	<div class="row">
 		<div class="col-xs-12" id="app-form">
-			<h2 style="color: rgba(31,43,58, 0.95);" class="text-center">Application</h2>
+			<h2 style="color: rgba(31,43,58, 0.95);" class="text-center hidden-xs">Application</h2>
+			<h2 style="color: rgba(31,43,58, 0.95);font-size: 40px;" class="text-center visible-xs">Application</h2>
 		</div>
 		<div class="col-sm-12">
 					<%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application' }) do |f| %>

@@ -1,5 +1,5 @@
 class InfoEnquiriesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:create]
+  skip_before_action :authenticate_user!, only: [:create, :new]
   before_action :set_info_enquiry, only: [:show, :edit, :update, :destroy]
 
   # GET /info_enquiries
@@ -32,7 +32,8 @@ class InfoEnquiriesController < ApplicationController
         InfoEnquiryMailerJob.new.async.perform(@info_enquiry.id)
         format.html { redirect_to info_thanks_path }
         format.json { render :show, status: :created, location: @info_enquiry }
-      
+      else
+        format.html { render :new }
       end
     end
   end

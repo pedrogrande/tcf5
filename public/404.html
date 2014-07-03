@@ -55,16 +55,25 @@
 
 <body>
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-  <img src="http://res.cloudinary.com/coder-factory/image/upload/v1401909689/logo-footer_ksgy8i.png" width="500px">
-  <h2>Hello! Is it me you're looking for?</h2>
-  <h2>I can see it in your eyes...</h2>
-  <h3>I can see it in your smile.</h3>
-  <br>
-  <P>Sorry, there's nothing here except Lionel.</P>
-  <a href="https://thecoderfactory.com">Return to the home page here</a>
-  <iframe width="1280" height="720" src="//www.youtube.com/embed/AiC7ZX5K9L4" frameborder="0" allowfullscreen></iframe>
-  
+ <%= render 'thanks/header' %>
+<div class="section white" style="padding-top: 7%;" >
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-4 col-xs-offset-4">
+            <h2 class="text-center"><span style="color:#1f2b3a">Woops</span></h2>
+     
+
+           <p class="text-center"><a href="http://coderfactory.co">Return to site</a></p>
+        </div>
+
+
+        </div>
+     </div>
+   </div>
+  </div>
 </div>
-</body>
+</div>
+<%= render 'home/footer' %>
+      </body>
 </html>

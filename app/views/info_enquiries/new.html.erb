@@ -1,5 +1,33 @@
-<h1>New info_enquiry</h1>
+<%= render 'thanks/header' %>
+<div class="section white" style="padding-top: 7%;" >
+	<div class="container">
+		<div class="row">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 col-xs-4 col-xs-offset-4">
+		      	<h2 class="text-center"><span style="color:#1f2b3a">Woops</span></h2>
+		      	<div class=" text-justify">
+	      			<p><b>You need to enter your email to receive the link to download the info pack.</b> Don't worry, we would never give away your details and we only occasionally send news which you can unsubscribe from at any time. </p>
 
-<%= render 'form' %>
+						<%= simple_form_for(@info_enquiry) do |f| %>
+						  <%= f.error_notification %>
 
-<%= link_to 'Back', info_enquiries_path %>
+						  
+						    <%= f.input :first_name, input_html: { data: { validation: 'true' }}, autofocus: true %>
+						    <%= f.input :email, input_html: { data: { validation: 'email' }} %>
+						  <div class=" text-center">
+						    <%= f.submit 'Request info pack', class: 'btn btn-default btn-lg' %>
+						  </div>
+						<% end %>
+
+					 <p class="text-center"><a href="/">Return to site</a></p>
+				</div>
+
+
+	    	</div>
+	   </div>
+	 </div>
+	</div>
+</div>
+</div>
+<%= render 'home/footer' %>
+	  	

@@ -11,6 +11,9 @@ class CourseApplication < ActiveRecord::Base
   					:country, 
   					:age, 
   					:experience,
-  					:reason, 
+  					:reason,
+            :intake_id,
   					presence: true
+
+  
 end

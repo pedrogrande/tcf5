@@ -28,7 +28,9 @@ class CourseApplicationsController < ApplicationController
   def create
     @course_application = CourseApplication.new(course_application_params)
     # @course_application.course = @course_application.intake.course
-
+    if session[:ref]
+      @course_application.referrer = Referrer.find_by('code = ?', session[:ref])
+    end
     respond_to do |format|
       if @course_application.save
         CourseApplicationMailerJob.new.async.perform(@course_application.id)

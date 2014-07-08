@@ -8,7 +8,12 @@
 					<%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application' }) do |f| %>
 					  <%= f.error_notification %>
 					  <div class="row">
-					    <div class="form-group string course_application_first_name col-sm-6"><div><input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" data-validation="required" data-validation-help="Please enter your first name" /><span class="help-block"></span></div></div>
+					    <div class="form-group string course_application_first_name col-sm-6">
+					    	<div>
+					    		<input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" data-validation="required" data-validation-help="Please enter your first name" />
+					    		<span class="help-block"></span>
+					    	</div>
+					    </div>
 					  
 					    <div class="form-group string course_application_last_name col-sm-6"><div><input class="string form-control form-control" id="course_application_last_name" name="course_application[last_name]" placeholder="* Last name" type="text" data-validation="required" /></div></div>
 					  </div>

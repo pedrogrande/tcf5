@@ -1,0 +1,77 @@
+<div class="container section" style="padding-top: 7%;" data-anchor="apply" id="apply">
+	<div class="row">
+		<div class="text-center col-xs-12" id="app-form">
+			<h2 style="color: rgba(31,43,58, 0.95);" class="hidden-xs">iOS Development<br>Application Form</h2>
+			<h2 style="color: rgba(31,43,58, 0.95);font-size: 40px;" class="visible-xs">Application</h2>
+			<p>Your future starts here...</p>
+		</div>
+		<div class="col-sm-12">
+					<%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application' }) do |f| %>
+					  <%= f.error_notification %>
+					  <div class="row">
+					    <div class="form-group string course_application_first_name col-sm-6">
+					    	<div>
+					    		<input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" data-validation="required" data-validation-help="Please enter your first name" />
+					    		<span class="help-block"></span>
+					    	</div>
+					    </div>
+					  
+					    <div class="form-group string course_application_last_name col-sm-6"><div><input class="string form-control form-control" id="course_application_last_name" name="course_application[last_name]" placeholder="* Last name" type="text" data-validation="required" /></div></div>
+					  </div>
+					  <div class="row">
+					    <div class="form-group email course_application_email col-sm-6"><div><input class="string email form-control form-control" id="course_application_email" name="course_application[email]" placeholder="* Email" type="email" data-validation="email" /></div></div>
+					  
+					    <div class="form-group tel course_application_phone col-sm-6"><div><input class="string tel form-control form-control" id="course_application_phone" name="course_application[phone]" placeholder="* Phone" type="tel" data-validation="required" /></div></div>
+					  </div>
+					  <div class="row">
+					  	<div class=" col-sm-6">
+					    	<%= f.input :city, label: false, placeholder: '* City', input_html: { class: 'form-control', data: { validation: 'required'} } %>
+					  	</div>
+					  	<div class=" col-sm-6">
+					    	<%= f.input :country, label: false, priority: [ "Australia" ], input_html: { class: 'form-control', data: { validation: 'required'}  } %>
+					    </div>
+					    </div>
+					  <div class="row">
+					  	<div class=" col-sm-6">
+					    	<%= f.input :age, label: false, placeholder: '* Age', input_html: { class: 'form-control', data: { validation: 'required'}  } %>
+					  </div>
+					  	<div class=" col-sm-6">
+					    	
+					    	<%= f.input :education, label: false, prompt: '* Education level', collection: ['High School', 'Vocational Education', 'Bachelor', 'Masters'], input_html: { class: 'form-control', data: { validation: 'required'}  } %>
+					  	</div>
+					  </div>
+					  
+					</div>
+					<div class="col-sm-12">
+					    <%= f.input :reason , label: 'Why are you applying?', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}} %>
+					  
+					    <%= f.input :experience, label: 'Please describe any prior programming experience, if any.', placeholder: 'Include your Github profile, personal website if applicable', input_html: { class: 'form-control', rows: 5, data: { validation: 'required'}} %>
+					</div>
+					<div class="col-sm-12">
+						<div class="form-group select course_application_intake">
+							<select class="select form-control" id="course_application_intake_id" name="course_application[intake_id]" data-validation="true">
+								
+								<% @intakes.each do |intake| %>
+									<option value="<%= intake.id %>"><%= intake.title %></option>
+								<% end %>
+							</select>
+						</div>
+					</div>
+					  
+					    <%= f.input :referral, label: false, placeholder: 'How did you find us? (friend, Google, Facebook, Twitter, ...)', input_html: { class: 'form-control' } %>
+					    <%= f.input :referrer_id, as: :hidden, input_html: { value: @referrer.id } if @referrer %>
+					  
+					 </div>
+					</div>
+
+					<div class="row">
+					<div class="col-sm-2 col-sm-offset-5">
+					  <div class="form-actions text-center">
+					    <%= f.submit 'Apply', class: 'btn btn-default btn-lg btn-block' %>
+					  </div>
+					<% end %>
+					
+					<br><br>
+				</div>
+			</div>
+</div>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'ios-development-course' => 'ios_development_course#index'
+
   root 'home#index'
   devise_for :users
   get 'privacy' => 'privacy#index'

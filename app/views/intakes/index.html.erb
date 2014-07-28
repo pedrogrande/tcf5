@@ -20,8 +20,8 @@
   <tbody>
     <% @intakes.each do |intake| %>
       <tr>
-        <td><%= intake.course %></td>
-        <td><%= intake.location %></td>
+        <td><%= intake.course.name %></td>
+        <td><%= intake.location.name %></td>
         <td><%= intake.day %></td>
         <td><%= intake.date %></td>
         <td><%= intake.end_date %></td>

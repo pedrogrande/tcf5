@@ -3,7 +3,7 @@ class IosDevelopmentCourseController < ApplicationController
   def index
   	@info_enquiry = InfoEnquiry.new
   	@course_application = CourseApplication.new
-  	@course = Course.find_by(name: 'iOS Development Course')
+  	@course = Course.find_by(name: 'iOS Development')
   	@intakes = Intake.where(course_id: @course.id)
   end
 end

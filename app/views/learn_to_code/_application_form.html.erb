@@ -1,8 +1,9 @@
 <div class="container section" style="padding-top: 7%;" data-anchor="apply" id="apply">
 	<div class="row">
-		<div class="col-xs-12" id="app-form">
-			<h2 style="color: rgba(31,43,58, 0.95);" class="text-center hidden-xs">Application</h2>
-			<h2 style="color: rgba(31,43,58, 0.95);font-size: 40px;" class="text-center visible-xs">Application</h2>
+		<div class="text-center col-xs-12" id="app-form">
+			<h2 style="color: rgba(31,43,58, 0.95);" class="hidden-xs">iOS Development<br>Application Form</h2>
+			<h2 style="color: rgba(31,43,58, 0.95);font-size: 40px;" class="visible-xs">Application</h2>
+			<p>Your future starts here...</p>
 		</div>
 		<div class="col-sm-12">
 					<%= simple_form_for(@course_application, html: { id: 'course-application', role: :form, 'data-model' => 'course_application' }) do |f| %>
@@ -11,7 +12,7 @@
 					    <div class="form-group string course_application_first_name col-sm-6">
 					    	<div>
 					    		<input class="string optional form-control form-control" id="course_application_first_name" name="course_application[first_name]" placeholder="* First name" type="text" data-validation="required" data-validation-help="Please enter your first name" />
-					    		<span style="font-weight:400" class="help-block"></span>
+					    		<span class="help-block"></span>
 					    	</div>
 					    </div>
 					  

@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Droid+Serif);
 /* Space out content a bit */
 
 body {
-	font-family: 'Droid Serif', serif;
-  font-weight: 400;
-	font-size: 18px;
+	font-family: 'Lato', serif;
+  font-weight: 300;
+	font-size: 24px;
 	line-height: 1.5em;
 	padding-top: 40px;
 	-webkit-font-smoothing: antialiased !important;	
@@ -26,7 +26,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Droid Serif', sans-serif;
   color: #ffffff;
 }
 
@@ -115,7 +115,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-inverse .navbar-nav > li > a {
   color: #ffffff;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
 
 	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
   -moz-transition: color 1s ease-in-out, border 1s ease-in-out;
@@ -212,7 +213,7 @@ li.apply-link a {
 	color: white;
 }
 .dark-blue a {
-	font-weight: bold;
+	font-weight: 400;
 	text-decoration: underline;
 	color: #FFF;
 	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
@@ -229,7 +230,7 @@ li.apply-link a {
 	padding: 40px 0 60px;
 }
 .grey a {
-	font-weight: bold;
+	font-weight: 400;
 	text-decoration: underline;
 	color: #1f2b3a;
 	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
@@ -418,7 +419,7 @@ label {
   opacity:0;
 }
 .sans {
-	font-family: 'Montserrat';
+	font-family: 'Lato';
 }
 .profile-box {
 	position:relative;
@@ -475,7 +476,7 @@ label {
 }
 .panel-default > .panel-heading a {
 
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 1.3em;
 	
 	-webkit-transition: color 1s ease-in-out, border 1s ease-in-out;
@@ -542,7 +543,7 @@ transform: scale(1, 1);
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 1;
   color: white;
   text-align: center;
@@ -599,4 +600,22 @@ transform: scale(1, 1);
 .form-close {
 	font-family: 'Montserrat';
 	border: 2px #1f2b3a solid;
+}
+.dollar {
+	background: #1f2b3a url(<%= asset_path 'dollar3.png' %>) no-repeat center;
+}
+.mobile {
+	background: #ccc url(<%= asset_path 'tablet.png' %>) no-repeat center;
+}
+.question {
+	background: #ccc url(<%= asset_path 'question.png' %>) no-repeat center;
+}
+.road {
+	background: #fff url(<%= asset_path 'road2.png' %>) no-repeat center;
+}
+.table {
+	font-size: 0.9em;
+}
+.team {
+	font-size: 0.75em;
 }

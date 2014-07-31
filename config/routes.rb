@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'learn_to_code/index'
+  get 'learn-to-code' => 'learn_to_code#index'
 
   get 'ios-development-course' => 'ios_development_course#index'
 

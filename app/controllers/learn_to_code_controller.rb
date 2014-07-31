@@ -3,7 +3,7 @@ class LearnToCodeController < ApplicationController
   def index
   	@info_enquiry = InfoEnquiry.new
   	@course_application = CourseApplication.new
-  	@course = Course.find_by(name: 'Learn To Code')
+  	@course = Course.find_by(name: 'Learn to Code')
   	@intakes = Intake.where(course_id: @course.id)
   end
 end
